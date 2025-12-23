@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Medication_Reminder_API.Services.Interfaces
 {
-    public class UserService :IUserService
+    public class UserService : IUserService
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ApplicationDbContext _context;
@@ -81,11 +81,11 @@ namespace Medication_Reminder_API.Services.Interfaces
                     Id = user.Id,
                     UserName = user.UserName,
                     Email = user.Email,
-                    Role = roles.FirstOrDefault() ?? "No Role"
-                    Password= roles.Pass
+                    Role = roles.FirstOrDefault() ?? "No Role",
+                    Password = user.PasswordHash
                 });
-            }
 
+            }
             return userDtos;
         }
     }

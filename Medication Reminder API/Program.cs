@@ -12,16 +12,16 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1) DbContext
+// ===== 1) DbContext =====
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 2) Identity
+// ===== 2) Identity =====
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
-// 3) JWT Authentication
+// ===== 3) JWT Authentication =====
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -34,7 +34,7 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuer = true,
         ValidateAudience = true,
         ValidateLifetime = true,
-        ClockSkew = TimeSpan.FromMinutes(5), // ›—ﬁ 5 œﬁ«Ìﬁ „”„ÊÕ
+        ClockSkew = TimeSpan.FromMinutes(5),
         ValidIssuer = builder.Configuration["Jwt:Issuer"],
         ValidAudience = builder.Configuration["Jwt:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(
@@ -42,10 +42,35 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// 4) AutoMapper
+// ===== 4) AutoMapper =====
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-// 5) Controllers + Swagger
+// ===== 5) Fluent Validation =====
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<MedicationValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<DoseLogDTOValidator>();
+
+// ===== 6) DI for Services =====
+builder.Services.AddScoped<IMedicationService, MedicationService>();
+builder.Services.AddScoped<ICaregiverService, CaregiverService>();
+builder.Services.AddScoped<IDoseLogService, DoseLogService>();
+builder.Services.AddScoped<IPatient, PatientService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
+// ===== 7) CORS =====
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy =>
+        {
+            policy.WithOrigins("http://127.0.0.1:5500")
+             .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
+// ===== 8) Controllers + Swagger =====
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -71,22 +96,9 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// 6) Fluent Validation
-builder.Services.AddFluentValidationAutoValidation();
-builder.Services.AddValidatorsFromAssemblyContaining<MedicationValidator>();
-builder.Services.AddValidatorsFromAssemblyContaining<DoseLogDTOValidator>();
-
-// 7) DI for Services
-builder.Services.AddScoped<IMedicationService, MedicationService>();
-builder.Services.AddScoped<ICaregiverService, CaregiverService>();
-builder.Services.AddScoped<IDoseLogService, DoseLogService>();
-builder.Services.AddScoped<IPatient, PatientService>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<ICaregiverService, CaregiverService>();
-
 var app = builder.Build();
 
-// Middleware
+// ===== Middleware =====
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -94,16 +106,26 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors(MyAllowSpecificOrigins);
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
-// Create Roles + Default Admin
+// ===== Create Roles + Default Admin =====
 await CreateRolesAsync(app);
+
+// ===== Test Dose Generation =====
+using (var scope = app.Services.CreateScope())
+{
+    var scopeFactory = scope.ServiceProvider.GetRequiredService<IServiceScopeFactory>();
+    var testService = new TestDoseGenerationService(scopeFactory);
+    await testService.ExecuteOnceAsync(); //  Ê·Ìœ «·Ã—⁄«  „—… Ê«Õœ… ··«Œ »«—
+}
 
 app.Run();
 
-// Helper: Create roles & default admin
+
+// ===== Helper: Create roles & default admin =====
 static async Task CreateRolesAsync(WebApplication app)
 {
     using var scope = app.Services.CreateScope();

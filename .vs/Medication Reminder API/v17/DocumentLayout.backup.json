@@ -3,12 +3,92 @@
   "WorkspaceRootPath": "F:\\Medication Reminder API\\Medication Reminder API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\caregiverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\caregiverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\medicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\medicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\doselogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\doselogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\caregivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\caregivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\medicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\medicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\doselogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\doselogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\dosegenerationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\dosegenerationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\enums\\medicationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\enums\\medicationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\testdoseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\testdoseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\models\\doselog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\models\\doselog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\models\\patientcaregiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\models\\patientcaregiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\enums\\dosestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\enums\\dosestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\caregiverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\caregiverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,14 +101,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Migrations\\20251212195848_updateCType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Medication Reminder API\\Migrations\\20251212195848_updateCType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\caregivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\caregivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Migrations\\20251212192951_updateName.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Medication Reminder API\\Migrations\\20251212192951_updateName.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\dtos\\doselogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,52 +123,12 @@
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\models\\medication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\medicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\medicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\medicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\medicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\dtos\\caregiverpatientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\dtos\\caregiverpatientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\interfaces\\ipatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,10 +151,6 @@
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\dtos\\adddosedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -135,10 +163,6 @@
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\models\\doctorpatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\controllers\\doselogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\controllers\\doselogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\validators\\medicationvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\validators\\medicationvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -147,28 +171,12 @@
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\validators\\doselogvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\doselogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\doselogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\dosegenerationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\dosegenerationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\dtos\\caregiverassigndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\dtos\\caregiverassigndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\models\\patientmedication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\models\\patientmedication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\models\\doselog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\models\\doselog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\services\\interfaces\\icaregiverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -215,14 +223,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Medication Reminder API\\Migrations\\20251210190413_medpatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\enums\\dosestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\enums\\dosestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\enums\\medicationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\enums\\medicationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\medication reminder api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\medication reminder api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -233,6 +233,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\migrations\\20251211174011_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\migrations\\20251211174011_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|f:\\medication reminder api\\medication reminder api\\medication reminder api\\migrations\\20251212192951_updatename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D56A0E2-D2C4-4DF6-BBBC-DAACFFD905B2}|Medication Reminder API\\Medication Reminder API.csproj|solutionrelative:medication reminder api\\migrations\\20251212192951_updatename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -242,7 +246,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -250,39 +254,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20251212195848_updateCType.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Migrations\\20251212195848_updateCType.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Migrations\\20251212195848_updateCType.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Migrations\\20251212195848_updateCType.cs",
-              "RelativeToolTip": "Medication Reminder API\\Migrations\\20251212195848_updateCType.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAADwvzQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T19:58:48.888Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CaregiverService.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\CaregiverService.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\CaregiverService.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\CaregiverService.cs",
-              "RelativeToolTip": "Medication Reminder API\\Services\\CaregiverService.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAIAwwFwAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T10:28:52.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Controllers\\BaseController.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "Medication Reminder API\\Controllers\\BaseController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T18:06:42.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CareGiverController.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\CareGiverController.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Controllers\\CareGiverController.cs",
               "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\CareGiverController.cs",
               "RelativeToolTip": "Medication Reminder API\\Controllers\\CareGiverController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAkwDAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAywGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T13:55:57.248Z",
               "EditorCaption": ""
@@ -290,487 +281,169 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Caregiver.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Caregiver.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\Caregiver.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Caregiver.cs",
-              "RelativeToolTip": "Medication Reminder API\\Models\\Caregiver.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T10:26:09.459Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Patient.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Patient.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\Patient.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Patient.cs",
-              "RelativeToolTip": "Medication Reminder API\\Models\\Patient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T17:54:18.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PatientCaregiver.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\PatientCaregiver.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\PatientCaregiver.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\PatientCaregiver.cs*",
-              "RelativeToolTip": "Medication Reminder API\\Models\\PatientCaregiver.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T10:06:36.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20251212192951_updateName.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Migrations\\20251212192951_updateName.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Migrations\\20251212192951_updateName.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Migrations\\20251212192951_updateName.cs",
-              "RelativeToolTip": "Medication Reminder API\\Migrations\\20251212192951_updateName.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T19:29:52.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginDTO.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\LoginDTO.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\LoginDTO.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\LoginDTO.cs",
-              "RelativeToolTip": "Medication Reminder API\\DTOS\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T13:30:20.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MedicationDTO.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\MedicationDTO.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\MedicationDTO.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\MedicationDTO.cs",
-              "RelativeToolTip": "Medication Reminder API\\DTOS\\MedicationDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T11:57:58.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PatientMedicationDTO.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\PatientMedicationDTO.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\PatientMedicationDTO.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\PatientMedicationDTO.cs",
-              "RelativeToolTip": "Medication Reminder API\\DTOS\\PatientMedicationDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T14:44:45.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Medication.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Medication.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\Medication.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Medication.cs",
-              "RelativeToolTip": "Medication Reminder API\\Models\\Medication.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T12:00:12.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DoseLogDTO.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\DoseLogDTO.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\DoseLogDTO.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\DoseLogDTO.cs",
-              "RelativeToolTip": "Medication Reminder API\\DTOS\\DoseLogDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T19:14:16.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MedicationService.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\MedicationService.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\MedicationService.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\MedicationService.cs",
-              "RelativeToolTip": "Medication Reminder API\\Services\\MedicationService.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwDUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T09:33:53.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MedicationController.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\MedicationController.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Controllers\\MedicationController.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\MedicationController.cs",
-              "RelativeToolTip": "Medication Reminder API\\Controllers\\MedicationController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T13:56:04.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CreateUserDTO.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\CreateUserDTO.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\CreateUserDTO.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\CreateUserDTO.cs",
-              "RelativeToolTip": "Medication Reminder API\\DTOS\\CreateUserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T12:38:25.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\UserDto.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\UserDto.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\UserDto.cs",
-              "RelativeToolTip": "Medication Reminder API\\DTOS\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T20:19:52.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\UserService.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\UserService.cs",
-              "RelativeToolTip": "Medication Reminder API\\Services\\UserService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAD4vykAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T20:21:32.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Doctor.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\Doctor.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Doctor.cs",
-              "RelativeToolTip": "Medication Reminder API\\Models\\Doctor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T11:49:29.228Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CaregiverPatientDTO.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\CaregiverPatientDTO.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\CaregiverPatientDTO.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\CaregiverPatientDTO.cs",
-              "RelativeToolTip": "Medication Reminder API\\DTOS\\CaregiverPatientDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T14:34:46.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Controllers\\AdminController.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Medication Reminder API\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T13:06:24.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AuthenticationController.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\AuthenticationController.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Controllers\\AuthenticationController.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\AuthenticationController.cs",
-              "RelativeToolTip": "Medication Reminder API\\Controllers\\AuthenticationController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T13:04:25.37Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "PatientController.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\PatientController.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Controllers\\PatientController.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\PatientController.cs",
-              "RelativeToolTip": "Medication Reminder API\\Controllers\\PatientController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAgwEEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T15:18:34.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "PatientService.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\PatientService.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\PatientService.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\PatientService.cs",
-              "RelativeToolTip": "Medication Reminder API\\Services\\PatientService.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T20:11:56.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Program.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Program.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Program.cs",
-              "RelativeToolTip": "Medication Reminder API\\Program.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAwHkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T05:43:01.58Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "IPatient.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\Interfaces\\IPatient.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\Interfaces\\IPatient.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\Interfaces\\IPatient.cs",
-              "RelativeToolTip": "Medication Reminder API\\Services\\Interfaces\\IPatient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T21:37:33.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "PatientValidator.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Validators\\PatientValidator.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Validators\\PatientValidator.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Validators\\PatientValidator.cs",
-              "RelativeToolTip": "Medication Reminder API\\Validators\\PatientValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T21:33:02.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ServiceResult.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\ServiceResult.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\ServiceResult.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\ServiceResult.cs",
-              "RelativeToolTip": "Medication Reminder API\\Models\\ServiceResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T16:54:45.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "PatientDto.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\PatientDto.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\PatientDto.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\PatientDto.cs",
-              "RelativeToolTip": "Medication Reminder API\\DTOS\\PatientDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T01:45:20.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "AddDoseDTO.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\AddDoseDTO.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\AddDoseDTO.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\AddDoseDTO.cs",
-              "RelativeToolTip": "Medication Reminder API\\DTOS\\AddDoseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T21:23:58.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "BaseController.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\BaseController.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Controllers\\BaseController.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\BaseController.cs",
-              "RelativeToolTip": "Medication Reminder API\\Controllers\\BaseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T18:06:42.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\ApplicationUser.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "Medication Reminder API\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T20:06:30.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\ApplicationDbContext.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Medication Reminder API\\Models\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAIwE0AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T18:08:58.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "DoctorPatient.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\DoctorPatient.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\DoctorPatient.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\DoctorPatient.cs",
-              "RelativeToolTip": "Medication Reminder API\\Models\\DoctorPatient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T12:01:38.853Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
               "Title": "DoseLogController.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\DoseLogController.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Controllers\\DoseLogController.cs",
               "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\DoseLogController.cs",
               "RelativeToolTip": "Medication Reminder API\\Controllers\\DoseLogController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAuwGgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAADwv2gAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T17:42:38.427Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "MedicationValidator.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Validators\\MedicationValidator.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Validators\\MedicationValidator.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Validators\\MedicationValidator.cs",
-              "RelativeToolTip": "Medication Reminder API\\Validators\\MedicationValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MedicationController.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\MedicationController.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Controllers\\MedicationController.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\MedicationController.cs",
+              "RelativeToolTip": "Medication Reminder API\\Controllers\\MedicationController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAADwv1oAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T19:00:27.988Z",
+              "WhenOpened": "2025-12-11T13:56:04.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "DoseLogValidator.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Validators\\DoseLogValidator.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Validators\\DoseLogValidator.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Validators\\DoseLogValidator.cs",
-              "RelativeToolTip": "Medication Reminder API\\Validators\\DoseLogValidator.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwCwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Controllers\\PatientController.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "Medication Reminder API\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAwEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T19:34:29.853Z",
+              "WhenOpened": "2025-12-12T15:18:34.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Program.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Program.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Program.cs",
+              "RelativeToolTip": "Medication Reminder API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T05:43:01.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "Medication Reminder API\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAcwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:04:25.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Controllers\\AdminController.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Medication Reminder API\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAIwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:06:24.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MedicationService.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\MedicationService.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\MedicationService.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\MedicationService.cs",
+              "RelativeToolTip": "Medication Reminder API\\Services\\MedicationService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T09:33:53.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "DoseLogService.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\DoseLogService.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Services\\DoseLogService.cs",
               "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\DoseLogService.cs",
               "RelativeToolTip": "Medication Reminder API\\Services\\DoseLogService.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAAAH8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAuwFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T13:00:23.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T13:00:23.478Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 11,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Medication Reminder API\\Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T12:35:28.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\UserService.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\UserService.cs",
+              "RelativeToolTip": "Medication Reminder API\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:21:32.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "DoseGenerationService.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\DoseGenerationService.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Services\\DoseGenerationService.cs",
               "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\DoseGenerationService.cs",
               "RelativeToolTip": "Medication Reminder API\\Services\\DoseGenerationService.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAQwE4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T09:26:31.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-08T09:26:31.1Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "CaregiverAssignDTO.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\CaregiverAssignDTO.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\CaregiverAssignDTO.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\CaregiverAssignDTO.cs",
-              "RelativeToolTip": "Medication Reminder API\\DTOS\\CaregiverAssignDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "MedicationStatus.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Enums\\MedicationStatus.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Enums\\MedicationStatus.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Enums\\MedicationStatus.cs",
+              "RelativeToolTip": "Medication Reminder API\\Enums\\MedicationStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T19:46:27.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T09:34:51.802Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "PatientMedication.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\PatientMedication.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\PatientMedication.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\PatientMedication.cs",
-              "RelativeToolTip": "Medication Reminder API\\Models\\PatientMedication.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "TestDoseService.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\TestDoseService.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\TestDoseService.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\TestDoseService.cs",
+              "RelativeToolTip": "Medication Reminder API\\Services\\TestDoseService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T18:59:39.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-12T21:18:41.934Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 15,
               "Title": "DoseLog.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\DoseLog.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Models\\DoseLog.cs",
@@ -778,24 +451,359 @@
               "RelativeToolTip": "Medication Reminder API\\Models\\DoseLog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T14:15:00.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T14:15:00.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PatientCaregiver.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\PatientCaregiver.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\PatientCaregiver.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\PatientCaregiver.cs",
+              "RelativeToolTip": "Medication Reminder API\\Models\\PatientCaregiver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T10:06:36.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DoseStatus.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Enums\\DoseStatus.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Enums\\DoseStatus.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Enums\\DoseStatus.cs",
+              "RelativeToolTip": "Medication Reminder API\\Enums\\DoseStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T09:33:40.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\Doctor.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Doctor.cs",
+              "RelativeToolTip": "Medication Reminder API\\Models\\Doctor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T11:49:29.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CaregiverService.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\CaregiverService.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\CaregiverService.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\CaregiverService.cs",
+              "RelativeToolTip": "Medication Reminder API\\Services\\CaregiverService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAIwEQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T10:28:52.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\UserDto.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\UserDto.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\UserDto.cs",
+              "RelativeToolTip": "Medication Reminder API\\DTOS\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:19:52.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\Patient.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Patient.cs",
+              "RelativeToolTip": "Medication Reminder API\\Models\\Patient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T17:54:18.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Caregiver.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Caregiver.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\Caregiver.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Caregiver.cs",
+              "RelativeToolTip": "Medication Reminder API\\Models\\Caregiver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T10:26:09.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CreateUserDTO.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\CreateUserDTO.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\CreateUserDTO.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\CreateUserDTO.cs",
+              "RelativeToolTip": "Medication Reminder API\\DTOS\\CreateUserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T12:38:25.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "20251212195848_updateCType.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Migrations\\20251212195848_updateCType.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Migrations\\20251212195848_updateCType.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Migrations\\20251212195848_updateCType.cs",
+              "RelativeToolTip": "Medication Reminder API\\Migrations\\20251212195848_updateCType.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvzQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T19:58:48.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "20251212192951_updateName.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Migrations\\20251212192951_updateName.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Migrations\\20251212192951_updateName.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Migrations\\20251212192951_updateName.cs",
+              "RelativeToolTip": "Medication Reminder API\\Migrations\\20251212192951_updateName.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T19:29:52.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\LoginDTO.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\LoginDTO.cs",
+              "RelativeToolTip": "Medication Reminder API\\DTOS\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:30:20.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MedicationDTO.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\MedicationDTO.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\MedicationDTO.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\MedicationDTO.cs",
+              "RelativeToolTip": "Medication Reminder API\\DTOS\\MedicationDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T11:57:58.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PatientMedicationDTO.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\PatientMedicationDTO.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\PatientMedicationDTO.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\PatientMedicationDTO.cs",
+              "RelativeToolTip": "Medication Reminder API\\DTOS\\PatientMedicationDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T14:44:45.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Medication.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Medication.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\Medication.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\Medication.cs",
+              "RelativeToolTip": "Medication Reminder API\\Models\\Medication.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T12:00:12.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DoseLogDTO.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\DoseLogDTO.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\DoseLogDTO.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\DoseLogDTO.cs",
+              "RelativeToolTip": "Medication Reminder API\\DTOS\\DoseLogDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T19:14:16.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CaregiverPatientDTO.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\CaregiverPatientDTO.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\CaregiverPatientDTO.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\CaregiverPatientDTO.cs",
+              "RelativeToolTip": "Medication Reminder API\\DTOS\\CaregiverPatientDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T14:34:46.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "PatientService.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\PatientService.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\PatientService.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\PatientService.cs",
+              "RelativeToolTip": "Medication Reminder API\\Services\\PatientService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:11:56.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IPatient.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\Interfaces\\IPatient.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\Interfaces\\IPatient.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\Interfaces\\IPatient.cs",
+              "RelativeToolTip": "Medication Reminder API\\Services\\Interfaces\\IPatient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T21:37:33.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "PatientValidator.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Validators\\PatientValidator.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Validators\\PatientValidator.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Validators\\PatientValidator.cs",
+              "RelativeToolTip": "Medication Reminder API\\Validators\\PatientValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T21:33:02.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ServiceResult.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\ServiceResult.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\ServiceResult.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\ServiceResult.cs",
+              "RelativeToolTip": "Medication Reminder API\\Models\\ServiceResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T16:54:45.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "PatientDto.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\PatientDto.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\PatientDto.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\PatientDto.cs",
+              "RelativeToolTip": "Medication Reminder API\\DTOS\\PatientDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T01:45:20.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AddDoseDTO.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\AddDoseDTO.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\AddDoseDTO.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\AddDoseDTO.cs",
+              "RelativeToolTip": "Medication Reminder API\\DTOS\\AddDoseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T21:23:58.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\ApplicationUser.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Medication Reminder API\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T20:06:30.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Medication Reminder API\\Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAIwE0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T18:08:58.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DoctorPatient.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\DoctorPatient.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\DoctorPatient.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\DoctorPatient.cs",
+              "RelativeToolTip": "Medication Reminder API\\Models\\DoctorPatient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T12:01:38.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "MedicationValidator.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Validators\\MedicationValidator.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Validators\\MedicationValidator.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Validators\\MedicationValidator.cs",
+              "RelativeToolTip": "Medication Reminder API\\Validators\\MedicationValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T19:00:27.988Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 41,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Services\\Interfaces\\IUserService.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "Medication Reminder API\\Services\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAzAAAAAAAAAA==",
+              "Title": "DoseLogValidator.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Validators\\DoseLogValidator.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Validators\\DoseLogValidator.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Validators\\DoseLogValidator.cs",
+              "RelativeToolTip": "Medication Reminder API\\Validators\\DoseLogValidator.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T12:35:28.813Z"
+              "WhenOpened": "2025-12-07T19:34:29.853Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 42,
+              "Title": "CaregiverAssignDTO.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\CaregiverAssignDTO.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\DTOS\\CaregiverAssignDTO.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\DTOS\\CaregiverAssignDTO.cs",
+              "RelativeToolTip": "Medication Reminder API\\DTOS\\CaregiverAssignDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:46:27.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "PatientMedication.cs",
+              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\PatientMedication.cs",
+              "RelativeDocumentMoniker": "Medication Reminder API\\Models\\PatientMedication.cs",
+              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Models\\PatientMedication.cs",
+              "RelativeToolTip": "Medication Reminder API\\Models\\PatientMedication.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T18:59:39.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
               "Title": "ICaregiverService.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\Interfaces\\ICaregiverService.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Services\\Interfaces\\ICaregiverService.cs",
@@ -807,7 +815,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "CareGiverProfile.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Automapper\\CareGiverProfile.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Automapper\\CareGiverProfile.cs",
@@ -819,7 +827,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "IDoseLogService.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\Interfaces\\IDoseLogService.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Services\\Interfaces\\IDoseLogService.cs",
@@ -831,7 +839,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "MedicationProfile.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Automapper\\MedicationProfile.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Automapper\\MedicationProfile.cs",
@@ -843,7 +851,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "appsettings.json",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\appsettings.json",
               "RelativeDocumentMoniker": "Medication Reminder API\\appsettings.json",
@@ -855,7 +863,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "global using.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\GlobalUsing\\global using.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\GlobalUsing\\global using.cs",
@@ -879,7 +887,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "PatientProfile.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Automapper\\PatientProfile.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Automapper\\PatientProfile.cs",
@@ -891,7 +899,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "DoesLogProfile.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Automapper\\DoesLogProfile.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Automapper\\DoesLogProfile.cs",
@@ -903,7 +911,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "IMedicationService.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Services\\Interfaces\\IMedicationService.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Services\\Interfaces\\IMedicationService.cs",
@@ -915,7 +923,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "SQLQuery1.sql",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\SQLQuery1.sql",
               "RelativeDocumentMoniker": "SQLQuery1.sql",
@@ -926,7 +934,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "20251210190413_medpatient.cs",
               "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Migrations\\20251210190413_medpatient.cs",
               "RelativeDocumentMoniker": "Medication Reminder API\\Migrations\\20251210190413_medpatient.cs",
@@ -934,30 +942,6 @@
               "RelativeToolTip": "Medication Reminder API\\Migrations\\20251210190413_medpatient.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T19:04:13.928Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "DoseStatus.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Enums\\DoseStatus.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Enums\\DoseStatus.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Enums\\DoseStatus.cs",
-              "RelativeToolTip": "Medication Reminder API\\Enums\\DoseStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T09:33:40.866Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "MedicationStatus.cs",
-              "DocumentMoniker": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Enums\\MedicationStatus.cs",
-              "RelativeDocumentMoniker": "Medication Reminder API\\Enums\\MedicationStatus.cs",
-              "ToolTip": "F:\\Medication Reminder API\\Medication Reminder API\\Medication Reminder API\\Enums\\MedicationStatus.cs",
-              "RelativeToolTip": "Medication Reminder API\\Enums\\MedicationStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T09:34:51.802Z"
             },
             {
               "$type": "Document",

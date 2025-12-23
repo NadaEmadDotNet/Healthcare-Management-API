@@ -146,3 +146,4 @@ F:\Medication Reminder API\Medication Reminder API\Medication Reminder API\bin\D
 F:\Medication Reminder API\Medication Reminder API\Medication Reminder API\bin\Debug\net8.0\Castle.Core.dll
 F:\Medication Reminder API\Medication Reminder API\Medication Reminder API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll
 F:\Medication Reminder API\Medication Reminder API\Medication Reminder API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Medication Reminder API\Medication Reminder API\Medication Reminder API\obj\Debug\net8.0\Medication Reminder API.sourcelink.json

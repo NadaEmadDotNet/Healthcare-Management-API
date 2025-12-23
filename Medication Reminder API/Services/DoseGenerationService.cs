@@ -1,81 +1,66 @@
 ﻿using Medication_Reminder_API.Models;
 using Medication_Reminder_API.Enums;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Medication_Reminder_API.Services
 {
-    public class DoseGenerationService : BackgroundService
+    public class TestDoseGenerationService
     {
         private readonly IServiceScopeFactory _scopeFactory;
 
-        public DoseGenerationService(IServiceScopeFactory scopeFactory)
+        public TestDoseGenerationService(IServiceScopeFactory scopeFactory)
         {
             _scopeFactory = scopeFactory;
         }
 
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        public async Task ExecuteOnceAsync()
         {
-            while (!stoppingToken.IsCancellationRequested)
+            using var scope = _scopeFactory.CreateScope();
+            var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+            var activeMedications = await db.Medications
+                .Where(m => m.Status == MedicationStatus.Ongoing)
+                .ToListAsync();
+
+            var today = DateTime.Today;
+
+            foreach (var med in activeMedications)
             {
-                try
+                var patientMeds = await db.PatientMedications
+                    .Include(pm => pm.Patient)
+                    .Where(pm => pm.MedicationID == med.MedicationID)
+                    .ToListAsync();
+
+                foreach (var pm in patientMeds)
                 {
-                    using var scope = _scopeFactory.CreateScope();
-                    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-                    await service.ExecuteAsync(CancellationToken.None); // للتجربة فقط
+                    var patient = pm.Patient;
 
-                    var activeMedications = await db.Medications
-                        .Where(m => m.Status == MedicationStatus.Ongoing)
-                        .ToListAsync(stoppingToken);
+                    bool alreadyGenerated = await db.DoseLogs
+                        .AnyAsync(d => d.MedicationID == med.MedicationID
+                                       && d.PatientID == patient.PatientID
+                                       && d.ScheduledTime.Date == today);
 
-                    var today = DateTime.Today;
-                    var tomorrow = today.AddDays(1);
-
-                    foreach (var med in activeMedications)
+                    if (!alreadyGenerated)
                     {
-                        var patients = await db.PatientMedications
-                            .Where(pm => pm.MedicationID == med.MedicationID)
-                            .Select(pm => pm.Patient)
-                            .ToListAsync(stoppingToken);
+                        double interval = 24.0 / med.Frequency;
 
-                        foreach (var patient in patients)
+                        for (int i = 0; i < med.Frequency; i++)
                         {
-                            // التحقق إذا تم توليد الجرعات لليوم بالفعل
-                            bool alreadyGenerated = await db.DoseLogs
-                                .AnyAsync(d => d.MedicationID == med.MedicationID
-                                               && d.PatientID == patient.PatientID
-                                               && d.ScheduledTime >= today
-                                               && d.ScheduledTime < tomorrow, stoppingToken);
-
-                            if (!alreadyGenerated)
+                            db.DoseLogs.Add(new DoseLog
                             {
-                                double interval = 24.0 / med.Frequency; // توزيع أدق بالساعات
-
-                                for (int i = 0; i < med.Frequency; i++)
-                                {
-                                    var scheduledTime = today.AddHours(i * interval);
-
-                                    db.DoseLogs.Add(new DoseLog
-                                    {
-                                        MedicationID = med.MedicationID,
-                                        PatientID = patient.PatientID,
-                                        Status = DoseStatus.Scheduled,
-                                        ScheduledTime = scheduledTime
-                                    });
-                                }
-                            }
+                                MedicationID = med.MedicationID,
+                                PatientID = patient.PatientID,
+                                Status = DoseStatus.Scheduled,
+                                ScheduledTime = today.AddHours(i * interval)
+                            });
                         }
                     }
-
-                    await db.SaveChangesAsync(stoppingToken);
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error generating daily doses: {ex.Message}");
-                }
-
-                // انتظر 24 ساعة قبل الدورة التالية
-                await Task.Delay(TimeSpan.FromHours(24), stoppingToken);
             }
+
+            await db.SaveChangesAsync();
+            Console.WriteLine("Daily doses generated successfully!");
         }
     }
 }

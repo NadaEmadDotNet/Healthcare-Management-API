@@ -104,7 +104,8 @@ public List<DoseLogDTO> GetDosesByMedicationName(int patientId, string name)
         dose.TakenTime = takenTime;
 
         // تحديث حالة الجرعة بناءً على الوقت
-        if (takenTime <= dose.ScheduledTime)
+        var endOfDay = dose.ScheduledTime.Date.AddDays(1); // نهاية اليوم نفسه
+        if (takenTime <= endOfDay)
             dose.Status = DoseStatus.Taken;
         else
             dose.Status = DoseStatus.Missed;
@@ -120,6 +121,7 @@ public List<DoseLogDTO> GetDosesByMedicationName(int patientId, string name)
 
         return dto;
     }
+
     public int GetTakenDoseCount(int medicationId)
     {
         return _context.DoseLogs.Count(d => d.MedicationID == medicationId && d.Status == DoseStatus.Taken);
