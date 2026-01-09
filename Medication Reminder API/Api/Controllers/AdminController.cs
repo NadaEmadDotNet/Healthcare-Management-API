@@ -1,14 +1,12 @@
-﻿using Medication_Reminder_API.Application.Validators;
-using Medication_Reminder_API.Infrastructure;
-using Medication_Reminder_API.Services.Interfaces;
+﻿using Medication_Reminder_API.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Medication_Reminder_API.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class AdminController : ControllerBase
     {
         private readonly IUserService _userService;

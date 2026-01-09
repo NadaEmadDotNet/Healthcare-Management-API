@@ -19,7 +19,6 @@ namespace Medication_Reminder_API.Application.Validators
                 .LessThan(150)
                 .WithMessage("Age must be less than 150.");
 
-            // الجنس لازم يكون Male أو Female أو Other
             RuleFor(x => x.Gender)
                 .NotEmpty()
                 .WithMessage("Gender is required.")

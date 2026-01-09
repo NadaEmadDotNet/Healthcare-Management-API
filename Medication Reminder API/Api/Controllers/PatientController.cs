@@ -1,7 +1,5 @@
 ﻿using Medication_Reminder_API.Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
 namespace Medication_Reminder_API.Api.Controllers
 {
     [Route("api/[controller]")]
@@ -49,16 +47,6 @@ namespace Medication_Reminder_API.Api.Controllers
             return Ok(patients);
         }
 
-        //[HttpPost]
-        //[Authorize(Roles = "Admin,Doctor")]
-        //public async Task<IActionResult> AddPatient([FromBody] PatientDto patientDto)
-        //{
-        //    if (patientDto == null)
-        //        return BadRequest("Patient data is empty.");
-
-        //    var addedPatient = await _patientService.AddAsync(patientDto);
-        //    return Ok(addedPatient);
-        //}
 
         [HttpPost("{patientId}/AssignMedication/{medicationId}")]
         [Authorize(Roles = "Admin,Doctor")]

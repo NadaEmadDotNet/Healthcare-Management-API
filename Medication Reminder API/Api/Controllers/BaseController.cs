@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore; // مهم للـ AnyAsync
-using System.Security.Claims;
-using System.Threading.Tasks;
-
-namespace Medication_Reminder_API.Api.Controllers
+﻿namespace Medication_Reminder_API.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

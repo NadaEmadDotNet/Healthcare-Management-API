@@ -1,10 +1,7 @@
 ﻿using Medication_Reminder_API.Application.DTOS;
 using Medication_Reminder_API.Application.Interfaces;
-using Medication_Reminder_API.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
+
 
 namespace Medication_Reminder_API.Api.Controllers
 {
@@ -34,7 +31,7 @@ namespace Medication_Reminder_API.Api.Controllers
         }
 
         [HttpGet("MyPatients")]
-        [Authorize(Roles = "Caregiver")]
+        [Authorize(Roles = "Caregiver,Admin")]
         public async Task<IActionResult> GetMyPatients()
         {
             string? userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
@@ -60,7 +57,7 @@ namespace Medication_Reminder_API.Api.Controllers
         }
 
         [HttpPost("AssignPatient")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Doctor")]
         public async Task<IActionResult> AssignPatient([FromBody] CaregiverAssignDTO dto)
         {
             try

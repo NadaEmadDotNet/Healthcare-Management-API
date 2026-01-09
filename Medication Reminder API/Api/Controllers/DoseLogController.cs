@@ -1,9 +1,5 @@
-﻿using AutoMapper;
-using Medication_Reminder_API.Application.Interfaces;
-using Medication_Reminder_API.Domain.Enums;
-using Medication_Reminder_API.Application.Validators;
+﻿using Medication_Reminder_API.Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Medication_Reminder_API.Api.Controllers
 {

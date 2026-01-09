@@ -80,8 +80,10 @@ namespace Medication_Reminder_API.Services.Interfaces
             if (!_cache.TryGetValue(cacheKey, out List<UserDto> cachedUsers))
             {
                 var users = await _userManager.Users.OrderByDescending(u => u.CreatedAt)
-                    .AsNoTracking().
-                    ToListAsync();
+            .AsNoTracking()
+            .Where(u => u.IsVisible) 
+            .OrderByDescending(u => u.CreatedAt)
+            .ToListAsync();
 
                 var userDtos = new List<UserDto>();
                 foreach (var user in users)

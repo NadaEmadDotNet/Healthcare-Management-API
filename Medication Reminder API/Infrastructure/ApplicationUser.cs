@@ -8,5 +8,8 @@ namespace Medication_Reminder_API.Infrastructure
         public bool IsActive { get; set; } = true;
         public bool IsVisible { get; set; } = true;
         public int TokenVersion { get; set; } 
+        public string RefreshToken { get; set; } = string.Empty;
+        public DateTime RefreshTokenExpiryTime { get; set; }
+
     }
 }

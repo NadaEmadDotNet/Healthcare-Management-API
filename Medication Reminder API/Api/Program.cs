@@ -1,14 +1,12 @@
-using FluentValidation;
 using FluentValidation.AspNetCore;
-using Medication_Reminder_API.Api;
 using Medication_Reminder_API.Api.Middleware;
 using Medication_Reminder_API.Application.Interfaces;
+using Medication_Reminder_API.Application.Services;
 using Medication_Reminder_API.Application.Validators;
 using Medication_Reminder_API.Infrastructure;
 using Medication_Reminder_API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
@@ -27,6 +25,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 //TestDoseGenerationService
 
 builder.Services.AddScoped<TestDoseGenerationService>();
+builder.Services.AddScoped<AuthenticationService>();
 
 
 // ===== 3) JWT Authentication =====
@@ -75,13 +74,14 @@ builder.Services.AddMemoryCache();
 //    options.AddPolicy(name: MyAllowSpecificOrigins,
 //        policy =>
 //        {
-//            policy.WithOrigins("") 
+//            policy.WithOrigins("")  ãÍÇæáÉ ÝÑæäÊ ÈÇÁÊ ÈÇáÝÔá
 //                  .AllowAnyHeader()
 //                  .AllowAnyMethod();
 //        });
 //});
 
 // ===== 8) Controllers + Swagger =====
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -115,14 +115,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseMiddleware<TokenVersionMiddleware>();
 app.UseHttpsRedirection();
-//app.UseCors(MyAllowSpecificOrigins);
 app.UseAuthentication();
+app.UseMiddleware<TokenVersionMiddleware>();
 app.UseAuthorization();
 app.MapControllers();
 
-// ===== Create Roles + Default Admin =====
+
 await CreateRolesAsync(app);
 
 // ===== Test Dose Generation ====
@@ -133,7 +132,6 @@ await testDoseService.ExecuteOnceAsync();
 app.Run();
 
 
-// ===== Helper: Create roles & default admin =====
 static async Task CreateRolesAsync(WebApplication app)
 {
     using var scope = app.Services.CreateScope();
@@ -148,13 +146,18 @@ static async Task CreateRolesAsync(WebApplication app)
             await roleManager.CreateAsync(new IdentityRole(role));
     }
 
-    // Default Admin
     string adminEmail = "admin@gmail.com";
     string adminPassword = "Admin123@#";
 
     if (await userManager.FindByEmailAsync(adminEmail) == null)
     {
-        var adminUser = new ApplicationUser { UserName = adminEmail, Email = adminEmail };
+        var adminUser = new ApplicationUser {
+            UserName = adminEmail,
+            Email = adminEmail, 
+            IsActive = true,
+            IsVisible = true,
+            TokenVersion = 0
+        };
         var result = await userManager.CreateAsync(adminUser, adminPassword);
         if (result.Succeeded)
             await userManager.AddToRoleAsync(adminUser, "Admin");
