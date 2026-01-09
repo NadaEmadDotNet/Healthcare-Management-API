@@ -14,6 +14,8 @@ This system provides:
 - Medication tracking per patient with detailed dose logs.
 - JWT authentication with refresh token support for secure access.
 - Password management with change password functionality.
+- Admin functionality to pre-register users and manage accounts.
+- Logging of user activities and system events.
 - Efficient data retrieval using AutoMapper.
 - In-memory caching & pagination for optimized performance.
 
@@ -21,10 +23,9 @@ This system provides:
 
 ## 🛠 Technologies Used
 
-- ASP.NET Core 
+-ASP.NET Core Web API
 - Entity Framework Core
 - AutoMapper
 - JWT Authentication with Refresh Tokens
 - SQL Server
 - Swagger for API documentation
-
