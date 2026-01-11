@@ -73,29 +73,56 @@ namespace Medication_Reminder_API.Application.Services
                 Message = "Registration successful. Please check your email to confirm your account."
             };
         }
-
-        public async Task<IActionResult> LoginAsync(LoginDTO dto)
+        public async Task<AuthResult> ConfirmEmail(string userId, string token)
         {
+            var user = await _userManager.FindByIdAsync(userId);
 
-            var user = await _userManager.FindByEmailAsync(dto.Email);
             if (user == null)
             {
-                _logger.LogWarning("Login attempt failed for email: {Email}", dto.Email);
-                return new BadRequestObjectResult("Invalid email or password");
+                return new AuthResult
+                {
+                    Success = false,
+                    Message = "User not found"
+                };
             }
 
-            if (!user.IsActive)
+            // اعمل ديكود للتوكن قبل التأكيد
+            var decodedToken = System.Web.HttpUtility.UrlDecode(token);
+
+            var result = await _userManager.ConfirmEmailAsync(user, decodedToken);
+
+            if (!result.Succeeded)
             {
-                _logger.LogWarning("Login failed: inactive account for email {Email}", dto.Email);
-                return new UnauthorizedObjectResult("Account is deactivated");
+                return new AuthResult
+                {
+                    Success = false,
+                    Message = string.Join(", ", result.Errors.Select(e => e.Description))
+                };
             }
+
+            user.IsActive = true;
+            await _userManager.UpdateAsync(user);
+
+            return new AuthResult
+            {
+                Success = true,
+                Message = "Email confirmed successfully"
+            };
+        }
+
+
+        public async Task<ServiceResult<object>> LoginAsync(LoginDTO dto)
+        {
+            var user = await _userManager.FindByEmailAsync(dto.Email);
+            if (user == null)
+                return new ServiceResult<object> { Success = false, Message = "Invalid email or password" };
+
+            if (!user.IsActive)
+                return new ServiceResult<object> { Success = false, Message = "Account is deactivated" };
 
             var isPasswordValid = await _userManager.CheckPasswordAsync(user, dto.Password);
             if (!isPasswordValid)
-            {
-                _logger.LogWarning("Invalid password for email {Email}", dto.Email);
-                return new BadRequestObjectResult("Invalid email or password");
-            }
+                return new ServiceResult<object> { Success = false, Message = "Invalid email or password" };
 
             var refreshToken = Guid.NewGuid().ToString();
             user.RefreshToken = refreshToken;
@@ -103,12 +130,12 @@ namespace Medication_Reminder_API.Application.Services
             await _userManager.UpdateAsync(user);
 
             var claims = new List<Claim>
-     {
-         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-         new Claim(ClaimTypes.NameIdentifier, user.Id),
-         new Claim(ClaimTypes.Name, user.UserName),
-         new Claim("tokenVersion", user.TokenVersion.ToString())
-     };
+    {
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        new Claim(ClaimTypes.NameIdentifier, user.Id),
+        new Claim(ClaimTypes.Name, user.UserName),
+        new Claim("tokenVersion", user.TokenVersion.ToString())
+    };
 
             var roles = await _userManager.GetRolesAsync(user);
             foreach (var role in roles)
@@ -125,33 +152,33 @@ namespace Medication_Reminder_API.Application.Services
                 signingCredentials: creds
             );
 
-            _logger.LogInformation("User {UserId} logged in successfully", user.Id);
-
-            return new OkObjectResult(new
+            return new ServiceResult<object>
             {
-                token = new JwtSecurityTokenHandler().WriteToken(token),
-                expiration = token.ValidTo,
-                RefreshToken = refreshToken
-            });
+                Success = true,
+                Message = "Login successful",
+                Data = new
+                {
+                    token = new JwtSecurityTokenHandler().WriteToken(token),
+                    expiration = token.ValidTo,
+                    RefreshToken = refreshToken
+                }
+            };
         }
 
-        public async Task<IActionResult> RefreshTokenAsync(string refreshToken)
+        public async Task<ServiceResult<object>> RefreshTokenAsync(string refreshToken)
         {
             var user = await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
 
             if (user == null || user.RefreshTokenExpiryTime < DateTime.UtcNow)
-            {
-                _logger.LogWarning("Invalid or expired refresh token attempt");
-                return new UnauthorizedObjectResult("Invalid or expired refresh token");
-            }
+                return new ServiceResult<object> { Success = false, Message = "Invalid or expired refresh token" };
 
             var claims = new List<Claim>
-     {
-         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-         new Claim(ClaimTypes.NameIdentifier, user.Id),
-         new Claim(ClaimTypes.Name, user.UserName),
-         new Claim("tokenVersion", user.TokenVersion.ToString())
-     };
+    {
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        new Claim(ClaimTypes.NameIdentifier, user.Id),
+        new Claim(ClaimTypes.Name, user.UserName),
+        new Claim("tokenVersion", user.TokenVersion.ToString())
+    };
 
             var roles = await _userManager.GetRolesAsync(user);
             foreach (var role in roles)
@@ -168,52 +195,41 @@ namespace Medication_Reminder_API.Application.Services
                 signingCredentials: creds
             );
 
-            return new OkObjectResult(new
+            return new ServiceResult<object>
             {
-                token = new JwtSecurityTokenHandler().WriteToken(token),
-                expiration = token.ValidTo
-            });
+                Success = true,
+                Message = "Token refreshed successfully",
+                Data = new
+                {
+                    token = new JwtSecurityTokenHandler().WriteToken(token),
+                    expiration = token.ValidTo
+                }
+            };
         }
 
-        public async Task<IActionResult> ChangePasswordAsync(string userId, ChangePasswordDto dto)
+
+        public async Task<ServiceResult> ChangePasswordAsync(string userId, ChangePasswordDto dto)
         {
             if (userId == null)
-            {
-                _logger.LogWarning("Change password failed: unauthorized request");
-                return new UnauthorizedResult();
-            }
+                return new ServiceResult { Success = false, Message = "Unauthorized request" };
 
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
-            {
-                _logger.LogWarning("Change password failed: user {UserId} not found", userId);
-                return new NotFoundObjectResult("User not found");
-            }
+                return new ServiceResult { Success = false, Message = "User not found" };
 
             if (dto.NewPassword != dto.ConfirmNewPassword)
-            {
-                _logger.LogWarning("Change password failed for user {UserId}: password mismatch", user.Id);
-                return new BadRequestObjectResult("New password and confirmation do not match");
-            }
+                return new ServiceResult { Success = false, Message = "New password and confirmation do not match" };
 
             var result = await _userManager.ChangePasswordAsync(user, dto.OldPassword, dto.NewPassword);
             if (!result.Succeeded)
-            {
-                _logger.LogWarning(
-                    "Change password failed for user {UserId}. Errors: {Errors}",
-                    user.Id,
-                    string.Join(", ", result.Errors.Select(e => e.Description))
-                );
-
-                return new BadRequestObjectResult(result.Errors);
-            }
+                return new ServiceResult { Success = false, Message = string.Join(", ", result.Errors.Select(e => e.Description)) };
 
             user.TokenVersion++;
             await _userManager.UpdateAsync(user);
 
-            _logger.LogInformation("Password changed successfully for user {UserId}", user.Id);
-            return new OkObjectResult("Password changed successfully");
+            return new ServiceResult { Success = true, Message = "Password changed successfully" };
         }
+
     }
 
- }
+}

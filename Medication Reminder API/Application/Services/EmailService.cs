@@ -40,43 +40,6 @@ namespace Medication_Reminder_API.Application.Services
             await smtpClient.SendMailAsync(message);
 
         }
-        public async Task<AuthResult> ConfirmEmail(string userId, string token)
-        {
-            var user = await _userManager.FindByIdAsync(userId);
-
-            if (user == null)
-            {
-                return new AuthResult
-                {
-                    Success = false,
-                    Message = "User not found"
-                };
-            }
-
-            // اعمل ديكود للتوكن قبل التأكيد
-            var decodedToken = System.Web.HttpUtility.UrlDecode(token);
-
-            var result = await _userManager.ConfirmEmailAsync(user, decodedToken);
-
-            if (!result.Succeeded)
-            {
-                return new AuthResult
-                {
-                    Success = false,
-                    Message = string.Join(", ", result.Errors.Select(e => e.Description))
-                };
-            }
-
-            user.IsActive = true;
-            await _userManager.UpdateAsync(user);
-
-            return new AuthResult
-            {
-                Success = true,
-                Message = "Email confirmed successfully"
-            };
-        }
-
 
     }
 }

@@ -57,6 +57,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<MedicationValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<DoseLogDTOValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<PatientValidator>();
 //DoseGenerationBackgroundService reg
 
 builder.Services.AddHostedService<DoseGenerationBackgroundService>();

@@ -3,7 +3,6 @@
     public interface IEmailService
     {
         Task SendEmailAsync(string to, string subject, string body);
-        Task<AuthResult> ConfirmEmail(string userId, string token);
     }
 
 }
