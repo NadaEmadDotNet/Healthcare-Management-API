@@ -16,6 +16,7 @@ namespace Medication_Reminder_API.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin,Doctor, Patient,Caregiver")]
         public async Task<IActionResult> GetAllPatients([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
             var userId = GetCurrentUserId();

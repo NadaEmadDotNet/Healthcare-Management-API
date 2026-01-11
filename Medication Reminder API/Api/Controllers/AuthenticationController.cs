@@ -1,4 +1,5 @@
 ﻿using Medication_Reminder_API.Application.DTOS;
+using Medication_Reminder_API.Application.Interfaces;
 using Medication_Reminder_API.Application.Services;
 using Medication_Reminder_API.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
@@ -14,11 +15,51 @@ namespace Medication_Reminder_API.Api.Controllers
     public class AuthenticationController : ControllerBase
     {
         private readonly AuthenticationService _authService;
-        public AuthenticationController(AuthenticationService authenticationService)
+        private readonly IEmailService _emailService;
+        public AuthenticationController(AuthenticationService authenticationService, IEmailService emailService)
         {
             _authService= authenticationService;
+            _emailService = emailService;
 
         }
+        [AllowAnonymous]    
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] RegisterDto dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Invalid registration data.");
+            }
+
+            var result = await _authService.Register(dto);
+
+            if (!result.Success)
+            {
+                return BadRequest(result.Message);
+            }
+
+            return Ok(result.Message);
+        }
+
+
+        [HttpGet("confirm-email")]
+        public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        {
+            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
+            {
+                return BadRequest("Invalid confirmation data.");
+            }
+
+            var result = await _emailService.ConfirmEmail(userId, token);
+
+            if (!result.Success)
+            {
+                return BadRequest(result.Message);
+            }
+
+            return Ok(result.Message);
+        }
+
         [AllowAnonymous]
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginDTO dto)

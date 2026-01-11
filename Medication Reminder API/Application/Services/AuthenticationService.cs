@@ -1,9 +1,13 @@
 ﻿using Medication_Reminder_API.Application.DTOS;
+using Medication_Reminder_API.Application.Interfaces;
 using Medication_Reminder_API.Infrastructure;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Identity.Client;
 using Microsoft.IdentityModel.Tokens;
+using System.ComponentModel;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using System.Web;
 
 namespace Medication_Reminder_API.Application.Services
 {
@@ -13,12 +17,61 @@ namespace Medication_Reminder_API.Application.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IConfiguration _configuration;
         private readonly ILogger<AuthenticationService> _logger;
+        private readonly IEmailService _emailService;
 
-        public AuthenticationService(UserManager<ApplicationUser> userManager, IConfiguration configuration, ILogger<AuthenticationService> logger)
+        public AuthenticationService(UserManager<ApplicationUser> userManager, IConfiguration configuration, ILogger<AuthenticationService> logger, IEmailService emailService)
         {
             _userManager = userManager;
             _configuration = configuration;
             _logger = logger;
+            _emailService = emailService;
+        }
+        public async Task<AuthResult> Register(RegisterDto dto)
+        {
+            var existingUser = await _userManager.FindByEmailAsync(dto.Email);
+            if (existingUser != null)
+            {
+                return new AuthResult
+                {
+                    Success = false,
+                    Message = $"Email '{dto.Email}' is already used."
+                };
+            }
+
+            var user = new ApplicationUser
+            {
+                UserName = dto.FullName.Replace(" ", ""),
+                Email = dto.Email,
+                FullName = dto.FullName,
+                IsActive = false
+            };
+
+
+
+            var result = await _userManager.CreateAsync(user, dto.Password);
+
+            if (!result.Succeeded)
+            {
+                return new AuthResult
+                {
+                    Success = false,
+                    Message = string.Join(", ", result.Errors.Select(e => e.Description))
+                };
+            }
+
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            var encodedToken = System.Web.HttpUtility.UrlEncode(token);
+
+            var confirmationLink = $"{_configuration["FrontendUrl"]}/api/auth/confirm-email?userId={user.Id}&token={encodedToken}";
+
+            await _emailService.SendEmailAsync(user.Email, "Confirm your email",
+                $"Please confirm your account by clicking this link: {confirmationLink}");
+
+            return new AuthResult
+            {
+                Success = true,
+                Message = "Registration successful. Please check your email to confirm your account."
+            };
         }
 
         public async Task<IActionResult> LoginAsync(LoginDTO dto)

@@ -20,33 +20,46 @@ namespace Medication_Reminder_API.Api.Controllers
 
         }
 
+        [HttpPost("AssignRole/{userId}")]
         [Authorize(Roles = "Admin")]
-        [HttpPost("CreateUser")]
-        public async Task<IActionResult> CreateUser([FromBody] CreateUserDTO dto)
+        public async Task<IActionResult> AssignRole(string userId, string role)
         {
-            if (dto == null)
-                return BadRequest("User data is required.");
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null) return NotFound();
 
-            try
-            {
-          
-              
-                var user = await _userService.Createuser(dto);
+            var currentRoles = await _userManager.GetRolesAsync(user);
+            await _userManager.RemoveFromRolesAsync(user, currentRoles);
+            await _userManager.AddToRoleAsync(user, role);
 
-                return Ok(new
-                {
-                    user.Id,
-                    user.UserName,
-                    user.Email,
-                    dto.Role,
-                    dto.FullName
-                });
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok($"User {user.UserName} assigned to role {role}");
         }
+        //[Authorize(Roles = "Admin")]
+        //[HttpPost("CreateUser")]
+        //public async Task<IActionResult> CreateUser([FromBody] CreateUserDTO dto)
+        //{
+        //    if (dto == null)
+        //        return BadRequest("User data is required.");
+
+        //    try
+        //    {
+
+
+        //        var user = await _userService.Createuser(dto);
+
+        //        return Ok(new
+        //        {
+        //            user.Id,
+        //            user.UserName,
+        //            user.Email,
+        //            dto.Role,
+        //            dto.FullName
+        //        });
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
 
         [Authorize(Roles = "Admin")]
         [HttpGet("AllUsers")]
