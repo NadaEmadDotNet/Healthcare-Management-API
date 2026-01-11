@@ -1,182 +1,131 @@
-﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
-using Medication_Reminder_API.Application.DTOS;
+﻿using Medication_Reminder_API.Application.DTOS;
 using Medication_Reminder_API.Application.Interfaces;
-using Medication_Reminder_API.Domain.Models;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Memory;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper.QueryableExtensions;
 
-namespace Medication_Reminder_API.Services
+
+public class PatientService : IPatientService
 {
-    public class PatientService : IPatient
+    private readonly IPatientRepository _repo;
+    private readonly IMapper _mapper;
+
+    public PatientService(IPatientRepository repo, IMapper mapper)
     {
-        private readonly ApplicationDbContext _context;
-        private readonly IMapper _mapper;
+        _repo = repo;
+        _mapper = mapper;
+    }
 
-        public PatientService(ApplicationDbContext context, IMapper mapper)
+    public async Task<PagedResult<PatientDto>> GetAllPatientsAsync(
+        string? doctorId, string? caregiverId, string? patientId,
+        int page = 1, int pageSize = 10)
+    {
+        var patients = _repo.GetAll();
+
+        // نفس logic الفيلتر
+        if (!string.IsNullOrEmpty(patientId))
+            patients = patients.Where(p => p.UserId == patientId);
+
+        var totalCount = await patients.CountAsync();
+        var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+
+        var data = await patients
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ProjectTo<PatientDto>(_mapper.ConfigurationProvider)
+            .ToListAsync();
+
+        return new PagedResult<PatientDto>
         {
-            _context = context;
-            _mapper = mapper;
-        }
+            Page = page,
+            PageSize = pageSize,
+            TotalCount = totalCount,
+            TotalPages = totalPages,
+            Data = data
+        };
+    }
 
-        public async Task<PagedResult<PatientDto>> GetAllPatientsAsync(
-            string? doctorId, string? caregiverId, string? patientId,
-            int page = 1, int pageSize = 10)
+    public async Task<List<PatientDto>> GetByIdsAsync(IEnumerable<int> ids)
+    {
+        var patients = await _repo.GetByIdsAsync(ids);
+        return _mapper.Map<List<PatientDto>>(patients);
+    }
+
+    public async Task<List<PatientDto>> GetByNameAsync(string name)
+    {
+        var patients = await _repo.GetByNameAsync(name);
+        return _mapper.Map<List<PatientDto>>(patients);
+    }
+
+    public async Task<PatientDto> AddAsync(PatientDto dto)
+    {
+        var patient = _mapper.Map<Patient>(dto);
+        await _repo.AddAsync(patient);
+        await _repo.SaveChangesAsync();
+        return _mapper.Map<PatientDto>(patient);
+    }
+
+    public async Task<PatientDto?> EditPatientAsync(int id, PatientDto dto)
+    {
+        var patient = await _repo.GetByIdAsync(id);
+        if (patient == null) return null;
+
+        _mapper.Map(dto, patient);
+        await _repo.SaveChangesAsync();
+
+        return _mapper.Map<PatientDto>(patient);
+    }
+
+    public async Task<PatientDto?> DeletePatientAsync(int id)
+    {
+        var patient = await _repo.GetByIdAsync(id);
+        if (patient == null) return null;
+
+        await _repo.DeleteAsync(patient);
+        await _repo.SaveChangesAsync();
+
+        return _mapper.Map<PatientDto>(patient);
+    }
+
+    public async Task<ServiceResult> AssignMedicationToPatientAsync(int patientId, int medicationId)
+    {
+        if (await _repo.IsMedicationAssignedAsync(patientId, medicationId))
+            return new ServiceResult { Success = false, Message = "This medication has already been assigned to the patient." };
+
+        await _repo.AssignMedicationAsync(new PatientMedication
         {
-            IQueryable<Patient> patients = _context.Patients
-                .AsNoTracking();
+            PatientID = patientId,
+            MedicationID = medicationId
+        });
+        await _repo.SaveChangesAsync();
 
-            if (!string.IsNullOrEmpty(doctorId))
+        return new ServiceResult { Success = true, Message = "Medication assigned successfully." };
+    }
+
+    public async Task GenerateDosesForNewAssignmentAsync(int patientId, int medicationId)
+    {
+        var patientMedication = await _repo.GetPatientMedicationAsync(patientId, medicationId);
+        if (patientMedication == null) return;
+
+        var med = patientMedication.Medication;
+        var patient = patientMedication.Patient;
+
+        var now = DateTime.Now;
+        double interval = 24.0 / med.Frequency;
+
+        for (int i = 0; i < med.Frequency; i++)
+        {
+            var scheduledTime = now.AddHours(i * interval);
+            if (scheduledTime.Date != now.Date) break;
+
+            patientMedication.Patient.DoseLogs.Add(new DoseLog
             {
-                patients = _context.DoctorPatients
-                    .Where(dp => dp.Doctor.UserId == doctorId)
-                    .Select(dp => dp.Patient)
-                    .OrderBy(p => p.Name)
-                    .AsNoTracking();
-            }
-            else if (!string.IsNullOrEmpty(caregiverId))
-            {
-                patients = _context.PatientCaregivers
-                    .Where(pc => pc.Caregiver.UserId == caregiverId)
-                    .Select(pc => pc.Patient)
-                    .AsNoTracking();
-            }
-            else if (!string.IsNullOrEmpty(patientId))
-            {
-                patients = patients.Where(p => p.UserId == patientId);
-            }
-
-            var totalCount = await patients.CountAsync();
-            var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
-
-            var data = await patients
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ProjectTo<PatientDto>(_mapper.ConfigurationProvider)
-                .ToListAsync();
-
-            return new PagedResult<PatientDto>
-            {
-                Page = page,
-                PageSize = pageSize,
-                TotalCount = totalCount,
-                TotalPages = totalPages,
-                Data = data
-            };
+                MedicationID = med.MedicationID,
+                PatientID = patient.PatientID,
+                Status = DoseStatus.Scheduled,
+                ScheduledTime = scheduledTime,
+                PatientName = patient.Name
+            });
         }
 
-        public async Task<List<PatientDto>> GetByIdsAsync(IEnumerable<int> ids)
-        {
-            return await _context.Patients
-                .Where(p => ids.Contains(p.PatientID)) // شيلنا IsActive و IsVisible
-                .AsNoTracking()
-                .ProjectTo<PatientDto>(_mapper.ConfigurationProvider)
-                .ToListAsync();
-        }
-
-        public async Task<List<PatientDto>> GetByNameAsync(string name)
-        {
-            if (string.IsNullOrWhiteSpace(name))
-                return new List<PatientDto>();
-
-            return await _context.Patients
-                .Where(p => EF.Functions.Like(p.Name, $"%{name}%")) // شيلنا IsActive و IsVisible
-                .OrderBy(p => p.Name)
-                .AsNoTracking()
-                .ProjectTo<PatientDto>(_mapper.ConfigurationProvider)
-                .ToListAsync();
-        }
-
-        public async Task<PatientDto> AddAsync(PatientDto dto)
-        {
-            var patient = _mapper.Map<Patient>(dto);
-            await _context.Patients.AddAsync(patient);
-            await _context.SaveChangesAsync();
-
-            return _mapper.Map<PatientDto>(patient);
-        }
-
-        public async Task<PatientDto?> EditPatientAsync(int id, PatientDto dto)
-        {
-            var patient = await _context.Patients.FindAsync(id);
-            if (patient == null) return null;
-
-            _mapper.Map(dto, patient);
-            await _context.SaveChangesAsync();
-
-            return _mapper.Map<PatientDto>(patient);
-        }
-
-        public async Task<PatientDto?> DeletePatientAsync(int id)
-        {
-            var patient = await _context.Patients.FindAsync(id);
-            if (patient == null) return null;
-
-            _context.Patients.Remove(patient);
-            await _context.SaveChangesAsync();
-
-            return _mapper.Map<PatientDto>(patient);
-        }
-
-        public async Task<ServiceResult> AssignMedicationToPatientAsync(int patientId, int medicationId)
-        {
-            var patient = await _context.Patients.FindAsync(patientId);
-            var med = await _context.Medications.FindAsync(medicationId);
-
-            if (patient == null || med == null)
-                return new ServiceResult { Success = false, Message = "Patient or Medication not found." };
-
-            bool alreadyAssigned = await _context.PatientMedications
-                .AnyAsync(pm => pm.PatientID == patientId && pm.MedicationID == medicationId);
-
-            if (alreadyAssigned)
-                return new ServiceResult { Success = false, Message = "This medication has already been assigned to the patient." };
-
-            var link = new PatientMedication
-            {
-                PatientID = patientId,
-                MedicationID = medicationId
-            };
-
-            await _context.PatientMedications.AddAsync(link);
-            await _context.SaveChangesAsync();
-
-            return new ServiceResult { Success = true, Message = "Medication assigned successfully." };
-        }
-        public async Task GenerateDosesForNewAssignmentAsync(int patientId, int medicationId)
-        {
-            var patientMedication = await _context.PatientMedications
-                .Include(pm => pm.Medication)
-                .Include(pm => pm.Patient)
-                .FirstOrDefaultAsync(pm => pm.PatientID == patientId && pm.MedicationID == medicationId);
-
-            if (patientMedication == null) return;
-
-            var med = patientMedication.Medication;
-            var patient = patientMedication.Patient;
-
-            var now = DateTime.Now;
-            double interval = 24.0 / med.Frequency;
-
-            for (int i = 0; i < med.Frequency; i++)
-            {
-                var scheduledTime = now.AddHours(i * interval);
-                if (scheduledTime.Date != now.Date) break; 
-
-                _context.DoseLogs.Add(new DoseLog
-                {
-                    MedicationID = med.MedicationID,
-                    PatientID = patient.PatientID,
-                    Status = DoseStatus.Scheduled,
-                    ScheduledTime = scheduledTime,
-                    PatientName= patient.Name
-                });
-            }
-
-            await _context.SaveChangesAsync();
-        }
+        await _repo.SaveChangesAsync();
     }
 }

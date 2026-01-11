@@ -1,4 +1,4 @@
-﻿namespace Medication_Reminder_API.Domain.Models
+﻿namespace Medication_Reminder_API.Application.DTOS
 {
     public class ServiceResult<T> : ServiceResult
     {

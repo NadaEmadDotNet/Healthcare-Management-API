@@ -8,9 +8,9 @@ namespace Medication_Reminder_API.Api.Controllers
     [Authorize]
     public class PatientController : BaseController
     {
-        private readonly IPatient _patientService;
+        private readonly IPatientService _patientService;
 
-        public PatientController(IPatient patientService, ApplicationDbContext context) : base(context)
+        public PatientController(IPatientService patientService, ApplicationDbContext context) : base(context)
         {
             _patientService = patientService;
         }

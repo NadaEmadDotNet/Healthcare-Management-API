@@ -30,13 +30,7 @@ namespace Medication_Reminder_API.Application.Services
         {
             var existingUser = await _userManager.FindByEmailAsync(dto.Email);
             if (existingUser != null)
-            {
-                return new AuthResult
-                {
-                    Success = false,
-                    Message = $"Email '{dto.Email}' is already used."
-                };
-            }
+                return new AuthResult { Success = false, Message = $"Email '{dto.Email}' is already used." };
 
             var user = new ApplicationUser
             {
@@ -46,21 +40,17 @@ namespace Medication_Reminder_API.Application.Services
                 IsActive = false
             };
 
-
-
             var result = await _userManager.CreateAsync(user, dto.Password);
 
             if (!result.Succeeded)
-            {
                 return new AuthResult
                 {
                     Success = false,
                     Message = string.Join(", ", result.Errors.Select(e => e.Description))
                 };
-            }
 
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            var encodedToken = System.Web.HttpUtility.UrlEncode(token);
+            var encodedToken = HttpUtility.UrlEncode(token);
 
             var confirmationLink = $"{_configuration["FrontendUrl"]}/api/auth/confirm-email?userId={user.Id}&token={encodedToken}";
 
@@ -73,43 +63,28 @@ namespace Medication_Reminder_API.Application.Services
                 Message = "Registration successful. Please check your email to confirm your account."
             };
         }
+
         public async Task<AuthResult> ConfirmEmail(string userId, string token)
         {
             var user = await _userManager.FindByIdAsync(userId);
-
             if (user == null)
-            {
-                return new AuthResult
-                {
-                    Success = false,
-                    Message = "User not found"
-                };
-            }
+                return new AuthResult { Success = false, Message = "User not found" };
 
-            // اعمل ديكود للتوكن قبل التأكيد
-            var decodedToken = System.Web.HttpUtility.UrlDecode(token);
-
+            var decodedToken = HttpUtility.UrlDecode(token);
             var result = await _userManager.ConfirmEmailAsync(user, decodedToken);
 
             if (!result.Succeeded)
-            {
                 return new AuthResult
                 {
                     Success = false,
                     Message = string.Join(", ", result.Errors.Select(e => e.Description))
                 };
-            }
 
             user.IsActive = true;
             await _userManager.UpdateAsync(user);
 
-            return new AuthResult
-            {
-                Success = true,
-                Message = "Email confirmed successfully"
-            };
+            return new AuthResult { Success = true, Message = "Email confirmed successfully" };
         }
-
 
         public async Task<ServiceResult<object>> LoginAsync(LoginDTO dto)
         {
@@ -124,18 +99,19 @@ namespace Medication_Reminder_API.Application.Services
             if (!isPasswordValid)
                 return new ServiceResult<object> { Success = false, Message = "Invalid email or password" };
 
+            // توليد Refresh Token
             var refreshToken = Guid.NewGuid().ToString();
             user.RefreshToken = refreshToken;
             user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
             await _userManager.UpdateAsync(user);
 
+            // Claims بدون tokenVersion
             var claims = new List<Claim>
-    {
-        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-        new Claim(ClaimTypes.NameIdentifier, user.Id),
-        new Claim(ClaimTypes.Name, user.UserName),
-        new Claim("tokenVersion", user.TokenVersion.ToString())
-    };
+            {
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.Name, user.UserName)
+            };
 
             var roles = await _userManager.GetRolesAsync(user);
             foreach (var role in roles)
@@ -172,13 +148,13 @@ namespace Medication_Reminder_API.Application.Services
             if (user == null || user.RefreshTokenExpiryTime < DateTime.UtcNow)
                 return new ServiceResult<object> { Success = false, Message = "Invalid or expired refresh token" };
 
+            // Claims بدون tokenVersion
             var claims = new List<Claim>
-    {
-        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-        new Claim(ClaimTypes.NameIdentifier, user.Id),
-        new Claim(ClaimTypes.Name, user.UserName),
-        new Claim("tokenVersion", user.TokenVersion.ToString())
-    };
+            {
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.Name, user.UserName)
+            };
 
             var roles = await _userManager.GetRolesAsync(user);
             foreach (var role in roles)
@@ -207,7 +183,6 @@ namespace Medication_Reminder_API.Application.Services
             };
         }
 
-
         public async Task<ServiceResult> ChangePasswordAsync(string userId, ChangePasswordDto dto)
         {
             if (userId == null)
@@ -224,12 +199,12 @@ namespace Medication_Reminder_API.Application.Services
             if (!result.Succeeded)
                 return new ServiceResult { Success = false, Message = string.Join(", ", result.Errors.Select(e => e.Description)) };
 
-            user.TokenVersion++;
+            // هنا بدل tokenVersion امسحي refresh token
+            user.RefreshToken = null;
             await _userManager.UpdateAsync(user);
 
             return new ServiceResult { Success = true, Message = "Password changed successfully" };
         }
-
     }
 
 }

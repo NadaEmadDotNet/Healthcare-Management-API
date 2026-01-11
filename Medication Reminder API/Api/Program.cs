@@ -1,9 +1,10 @@
 using FluentValidation.AspNetCore;
-using Medication_Reminder_API.Api.Middleware;
 using Medication_Reminder_API.Application.Interfaces;
 using Medication_Reminder_API.Application.Services;
 using Medication_Reminder_API.Application.Validators;
 using Medication_Reminder_API.Infrastructure;
+using Medication_Reminder_API.Infrastructure.Reposatories;
+using Medication_Reminder_API.Infrastructure.Repositories;
 using Medication_Reminder_API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -61,12 +62,27 @@ builder.Services.AddValidatorsFromAssemblyContaining<PatientValidator>();
 //DoseGenerationBackgroundService reg
 
 builder.Services.AddHostedService<DoseGenerationBackgroundService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ICaregiverRepository, CaregiverRepository>();
+builder.Services.AddScoped<IMedicationRepository, MedicationRepository>();
+builder.Services.AddScoped<IDoseLogRepository, DoseLogRepository>();
+builder.Services.AddScoped<IPatientRepository, PatientRepository>();
+
+
+// ---- Services ----
+builder.Services.AddScoped<AuthenticationService>();
+builder.Services.AddScoped<ICaregiverService, CaregiverService>();
+builder.Services.AddScoped<IMedicationService, MedicationService>();
+builder.Services.AddScoped<IDoseLogService, DoseLogService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+
+
 
 // ===== 6) DI for Services =====
 builder.Services.AddScoped<IMedicationService, MedicationService>();
 builder.Services.AddScoped<ICaregiverService, CaregiverService>();
 builder.Services.AddScoped<IDoseLogService, DoseLogService>();
-builder.Services.AddScoped<IPatient, PatientService>();
+builder.Services.AddScoped<IPatientService, PatientService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 
@@ -125,7 +141,6 @@ if (app.Environment.IsDevelopment())
 }
 app.UseHttpsRedirection();
 app.UseAuthentication();
-app.UseMiddleware<TokenVersionMiddleware>();
 app.UseAuthorization();
 app.MapControllers();
 

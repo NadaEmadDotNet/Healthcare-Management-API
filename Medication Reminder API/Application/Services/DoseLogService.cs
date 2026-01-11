@@ -1,22 +1,23 @@
-﻿using Medication_Reminder_API.Application.Interfaces;
+﻿using AutoMapper;
+using Medication_Reminder_API.Application.DTOS;
+using Medication_Reminder_API.Application.Interfaces;
 using Medication_Reminder_API.Domain.Enums;
 using Medication_Reminder_API.Domain.Models;
+
 public class DoseLogService : IDoseLogService
 {
-    private readonly ApplicationDbContext _context;
+    private readonly IDoseLogRepository _doseRepo;
     private readonly IMapper _mapper;
 
-
-    public DoseLogService(ApplicationDbContext context, IMapper mapper)
+    public DoseLogService(IDoseLogRepository doseRepo, IMapper mapper)
     {
-        _context = context;
+        _doseRepo = doseRepo;
         _mapper = mapper;
     }
 
     public PagedResult<DoseLogDTO> GetDosesForPatient(int patientId, DoseStatus? status = null, int page = 1, int pageSize = 10)
     {
-        var doses = _context.DoseLogs
-            .Include(d => d.Medication)
+        var doses = _doseRepo.GetAll()
             .Where(d => d.PatientID == patientId);
 
         if (status.HasValue)
@@ -44,40 +45,37 @@ public class DoseLogService : IDoseLogService
 
     public DoseLogDTO? GetDoseById(int id)
     {
-        var dose = _context.DoseLogs
-            .Include(d => d.Patient)
-            .Include(d => d.Medication)
+        var dose = _doseRepo.GetAll()
             .FirstOrDefault(d => d.DoseLogID == id);
 
         if (dose == null) return null;
 
         var doseDTO = _mapper.Map<DoseLogDTO>(dose);
-
         doseDTO.PatientName = dose.Patient.Name;
         doseDTO.MedicationName = dose.Medication.Name;
-
         return doseDTO;
     }
 
-public List<DoseLogDTO> GetDosesByMedicationName(int patientId, string name)
+    public List<DoseLogDTO> GetDosesByMedicationName(int patientId, string name)
     {
-        var doses = _context.DoseLogs
-            .Include(d => d.Medication)
+        var doses = _doseRepo.GetAll()
             .Where(d => d.PatientID == patientId && d.Medication.Name.Contains(name));
 
         return _mapper.Map<List<DoseLogDTO>>(doses.ToList());
     }
+
     public DoseLogDTO AddDose(AddDoseDTO dto)
     {
-        var med = _context.Medications.Find(dto.MedicationID);
+        // نفس اللوجيك
+        var med = _doseRepo.GetAll().FirstOrDefault(m => m.MedicationID == dto.MedicationID)?.Medication;
         if (med == null)
             throw new ArgumentException("Medication not found.");
 
-        var patient = _context.Patients.Find(dto.PatientID);
+        var patient = _doseRepo.GetAll().FirstOrDefault(p => p.PatientID == dto.PatientID)?.Patient;
         if (patient == null)
             throw new ArgumentException("Patient not found.");
 
-        var patientMed = _context.PatientMedications
+        var patientMed = _doseRepo.GetAll()
             .FirstOrDefault(pm => pm.PatientID == dto.PatientID && pm.MedicationID == dto.MedicationID);
         if (patientMed == null)
             throw new ArgumentException("Medication is not assigned to this patient.");
@@ -94,12 +92,10 @@ public List<DoseLogDTO> GetDosesByMedicationName(int patientId, string name)
             Notes = dto.Notes
         };
 
-        _context.DoseLogs.Add(dose);
-        _context.SaveChanges();
+        _doseRepo.AddAsync(dose).Wait();
+        _doseRepo.SaveChangesAsync().Wait();
 
         var doseDTO = _mapper.Map<DoseLogDTO>(dose);
-
-
         doseDTO.PatientName = patient.Name;
         doseDTO.MedicationName = med.Name;
 
@@ -108,24 +104,18 @@ public List<DoseLogDTO> GetDosesByMedicationName(int patientId, string name)
 
     public DoseLogDTO? UpdateTakenTime(int doseLogId, DateTime takenTime, IMedicationService medService)
     {
-        var dose = _context.DoseLogs
-            .Include(d => d.Medication)
-            .Include(d => d.Patient)
+        var dose = _doseRepo.GetAll()
             .FirstOrDefault(d => d.DoseLogID == doseLogId);
 
         if (dose == null) return null;
 
-        // تحديث TakenTime
         dose.TakenTime = takenTime;
 
         // تحديث حالة الجرعة بناءً على الوقت
-        var endOfDay = dose.ScheduledTime.Date.AddDays(1); // نهاية اليوم نفسه
-        if (takenTime <= endOfDay)
-            dose.Status = DoseStatus.Taken;
-        else
-            dose.Status = DoseStatus.Missed;
+        var endOfDay = dose.ScheduledTime.Date.AddDays(1);
+        dose.Status = takenTime <= endOfDay ? DoseStatus.Taken : DoseStatus.Missed;
 
-        _context.SaveChanges();
+        _doseRepo.SaveChangesAsync().Wait();
 
         medService.UpdateStatusAsync(dose.MedicationID);
 
@@ -138,6 +128,6 @@ public List<DoseLogDTO> GetDosesByMedicationName(int patientId, string name)
 
     public int GetTakenDoseCount(int medicationId)
     {
-        return _context.DoseLogs.Count(d => d.MedicationID == medicationId && d.Status == DoseStatus.Taken);
+        return _doseRepo.GetAll().Count(d => d.MedicationID == medicationId && d.Status == DoseStatus.Taken);
     }
 }

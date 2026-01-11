@@ -1,11 +1,10 @@
 ﻿using Medication_Reminder_API.Application.Interfaces;
-using Medication_Reminder_API.Infrastructure;
 using Microsoft.AspNetCore.Identity;
 using System.Net;
 using System.Net.Http;
 using System.Net.Mail;
 
-namespace Medication_Reminder_API.Application.Services
+namespace Medication_Reminder_API.Infrastructure
 {
     public class EmailService: IEmailService 
     {

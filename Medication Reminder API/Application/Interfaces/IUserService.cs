@@ -4,7 +4,10 @@ using Microsoft.AspNetCore.Identity;
 
 public interface IUserService
 {
-      Task<ApplicationUser> Createuser(CreateUserDTO dto);
-     Task<List<UserDto>> GetAllUsersAsync();
-    Task<ServiceResult> ChangeUserStatusAsync(string userId, UpdateUserStatusDto dto, UserManager<ApplicationUser> userManager);
+    public interface IUserService
+    {
+        Task<List<UserDto>> GetAllUsersAsync();
+        Task<ServiceResult> ChangeUserStatusAsync(string userId, UpdateUserStatusDto dto);
+    }
+
 }

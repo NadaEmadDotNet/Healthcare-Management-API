@@ -1,8 +1,8 @@
-﻿using Medication_Reminder_API.Domain.Models;
+﻿using Medication_Reminder_API.Application.DTOS;
 
 namespace Medication_Reminder_API.Application.Interfaces
 {
-    public interface IPatient
+    public interface IPatientService
     {
            Task<PagedResult<PatientDto>> GetAllPatientsAsync(
             string? doctorId, string? caregiverId, string? patientId,
