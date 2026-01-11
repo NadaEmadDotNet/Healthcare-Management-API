@@ -11,6 +11,27 @@
   },
   {
     "ContainingType": "Medication_Reminder_API.Api.Controllers.AdminController",
+    "Method": "AssignRole",
+    "RelativePath": "api/Admin/AssignRole/{userId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "role",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Medication_Reminder_API.Api.Controllers.AdminController",
     "Method": "ChangeUserStatus",
     "RelativePath": "api/Admin/ChangeUserStatus",
     "HttpMethod": "POST",
@@ -31,22 +52,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Medication_Reminder_API.Api.Controllers.AdminController",
-    "Method": "CreateUser",
-    "RelativePath": "api/Admin/CreateUser",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "CreateUserDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Medication_Reminder_API.Api.Controllers.AuthenticationController",
     "Method": "ChangePassword",
     "RelativePath": "api/Authentication/change-password",
@@ -58,6 +63,27 @@
         "Name": "dto",
         "Type": "Medication_Reminder_API.Application.DTOS.ChangePasswordDto",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Medication_Reminder_API.Api.Controllers.AuthenticationController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/Authentication/confirm-email",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -89,6 +115,22 @@
       {
         "Name": "refreshToken",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Medication_Reminder_API.Api.Controllers.AuthenticationController",
+    "Method": "Register",
+    "RelativePath": "api/Authentication/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Medication_Reminder_API.Application.DTOS.RegisterDto",
         "IsRequired": true
       }
     ],

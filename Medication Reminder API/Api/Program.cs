@@ -67,6 +67,8 @@ builder.Services.AddScoped<ICaregiverService, CaregiverService>();
 builder.Services.AddScoped<IDoseLogService, DoseLogService>();
 builder.Services.AddScoped<IPatient, PatientService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+
 // MEMO Cahe
 builder.Services.AddMemoryCache();
 
@@ -128,12 +130,6 @@ app.MapControllers();
 
 
 await CreateRolesAsync(app);
-
-//// ===== Test Dose Generation ====
-
-//using var scope = app.Services.CreateScope();
-//var testDoseService = scope.ServiceProvider.GetRequiredService<TestDoseGenerationService>();
-//await testDoseService.ExecuteOnceAsync();
 app.Run();
 
 
@@ -156,11 +152,13 @@ static async Task CreateRolesAsync(WebApplication app)
 
     if (await userManager.FindByEmailAsync(adminEmail) == null)
     {
-        var adminUser = new ApplicationUser {
+        var adminUser = new ApplicationUser
+        {
             UserName = adminEmail,
-            Email = adminEmail, 
+            Email = adminEmail,
             IsActive = true,
             IsVisible = true,
+            EmailConfirmed = true,
             TokenVersion = 0,
             FullName = "System Administrator",
         };
