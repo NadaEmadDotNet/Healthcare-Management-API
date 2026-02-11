@@ -2,7 +2,7 @@
 
 public class DoseLogDTO
 {
-    public int DoseLogID { get; set; }          // معرف الجرعة
+    public int DoseLogID { get; set; }          
     public int PatientID { get; set; }
     public string PatientName { get; set; }
     public int MedicationID { get; set; }

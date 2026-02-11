@@ -18,6 +18,17 @@ public class DoseLogRepository : IDoseLogRepository
             .Include(d => d.Medication)
             .Include(d => d.Patient)
             .FirstOrDefaultAsync(d => d.DoseLogID == id);
+    public async Task<List<DoseLogDTO>> GetDoseLogsAsync(int patientId, int medicationId)
+    {
+        return await _context.DoseLogs
+            .Where(d => d.PatientID == patientId && d.MedicationID == medicationId)
+            .Select(d => new DoseLogDTO
+            {
+                DoseLogID = d.DoseLogID,
+                Status = d.Status
+            })
+            .ToListAsync();
+    }
 
     public async Task<List<DoseLog>> GetByPatientIdAsync(int patientId) =>
         await _context.DoseLogs
@@ -28,4 +39,5 @@ public class DoseLogRepository : IDoseLogRepository
     public async Task AddAsync(DoseLog dose) => await _context.DoseLogs.AddAsync(dose);
 
     public async Task SaveChangesAsync() => await _context.SaveChangesAsync();
+
 }

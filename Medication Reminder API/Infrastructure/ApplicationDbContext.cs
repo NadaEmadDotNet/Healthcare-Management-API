@@ -47,12 +47,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     .HasForeignKey(dl => dl.PatientID)
     .OnDelete(DeleteBehavior.Restrict);
 
-        //builder.Entity<DoseLog>()
-        //    .HasOne(dl => dl.Medication)
-        //    .WithMany(m => m.DoseLogs)
-        //    .HasForeignKey(dl => dl.MedicationID)
-        //    .OnDelete(DeleteBehavior.Restrict);
-
+    
         builder.Entity<PatientMedication>()
             .HasKey(pm => new { pm.PatientID, pm.MedicationID });
 

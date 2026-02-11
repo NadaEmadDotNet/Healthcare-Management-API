@@ -3,6 +3,7 @@ using Medication_Reminder_API.Application.DTOS;
 using Medication_Reminder_API.Application.Interfaces;
 using Medication_Reminder_API.Domain.Enums;
 using Medication_Reminder_API.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 public class DoseLogService : IDoseLogService
 {
@@ -55,6 +56,12 @@ public class DoseLogService : IDoseLogService
         doseDTO.MedicationName = dose.Medication.Name;
         return doseDTO;
     }
+   public Task<List<DoseLogDTO>> GetDoseLogsAsync(int patientId, int medicationId)
+    { 
+    var doses= _doseRepo.GetAll()
+            .Where(d => d.PatientID == patientId && d.MedicationID == medicationId);
+        return Task.FromResult(_mapper.Map<List<DoseLogDTO>>(doses.ToList()));
+    }
 
     public List<DoseLogDTO> GetDosesByMedicationName(int patientId, string name)
     {
@@ -66,7 +73,6 @@ public class DoseLogService : IDoseLogService
 
     public DoseLogDTO AddDose(AddDoseDTO dto)
     {
-        // نفس اللوجيك
         var med = _doseRepo.GetAll().FirstOrDefault(m => m.MedicationID == dto.MedicationID)?.Medication;
         if (med == null)
             throw new ArgumentException("Medication not found.");
@@ -125,6 +131,8 @@ public class DoseLogService : IDoseLogService
 
         return dto;
     }
+
+
 
     public int GetTakenDoseCount(int medicationId)
     {

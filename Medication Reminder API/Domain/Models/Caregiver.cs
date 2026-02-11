@@ -4,7 +4,7 @@ namespace Medication_Reminder_API.Domain.Models
 {
     public class Caregiver
     {
-            public int CaregiverID { get; set; }     // PK
+            public int CaregiverID { get; set; }     
              public string UserId { get; set; }  
              public string Name { get; set; }
             public string RelationToPatient { get; set; }

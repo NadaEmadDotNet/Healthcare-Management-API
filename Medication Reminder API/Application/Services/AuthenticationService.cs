@@ -2,30 +2,29 @@
 using Medication_Reminder_API.Application.Interfaces;
 using Medication_Reminder_API.Infrastructure;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Identity.Client;
-using Microsoft.IdentityModel.Tokens;
-using System.ComponentModel;
-using System.IdentityModel.Tokens.Jwt;
-using System.Text;
 using System.Web;
 
 namespace Medication_Reminder_API.Application.Services
 {
-    public class AuthenticationService
+    public class AuthenticationService : IAuthenticationService
     {
-
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IConfiguration _configuration;
-        private readonly ILogger<AuthenticationService> _logger;
         private readonly IEmailService _emailService;
+        private readonly ITokenService _tokenService;
 
-        public AuthenticationService(UserManager<ApplicationUser> userManager, IConfiguration configuration, ILogger<AuthenticationService> logger, IEmailService emailService)
+        public AuthenticationService(
+            UserManager<ApplicationUser> userManager,
+            IConfiguration configuration,
+            IEmailService emailService,
+            ITokenService tokenService)
         {
             _userManager = userManager;
             _configuration = configuration;
-            _logger = logger;
             _emailService = emailService;
+            _tokenService = tokenService;
         }
+
         public async Task<AuthResult> Register(RegisterDto dto)
         {
             var existingUser = await _userManager.FindByEmailAsync(dto.Email);
@@ -52,9 +51,12 @@ namespace Medication_Reminder_API.Application.Services
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             var encodedToken = HttpUtility.UrlEncode(token);
 
-            var confirmationLink = $"{_configuration["FrontendUrl"]}/api/auth/confirm-email?userId={user.Id}&token={encodedToken}";
+            var confirmationLink =
+                $"{_configuration["FrontendUrl"]}/api/auth/confirm-email?userId={user.Id}&token={encodedToken}";
 
-            await _emailService.SendEmailAsync(user.Email, "Confirm your email",
+            await _emailService.SendEmailAsync(
+                user.Email,
+                "Confirm your email",
                 $"Please confirm your account by clicking this link: {confirmationLink}");
 
             return new AuthResult
@@ -62,28 +64,6 @@ namespace Medication_Reminder_API.Application.Services
                 Success = true,
                 Message = "Registration successful. Please check your email to confirm your account."
             };
-        }
-
-        public async Task<AuthResult> ConfirmEmail(string userId, string token)
-        {
-            var user = await _userManager.FindByIdAsync(userId);
-            if (user == null)
-                return new AuthResult { Success = false, Message = "User not found" };
-
-            var decodedToken = HttpUtility.UrlDecode(token);
-            var result = await _userManager.ConfirmEmailAsync(user, decodedToken);
-
-            if (!result.Succeeded)
-                return new AuthResult
-                {
-                    Success = false,
-                    Message = string.Join(", ", result.Errors.Select(e => e.Description))
-                };
-
-            user.IsActive = true;
-            await _userManager.UpdateAsync(user);
-
-            return new AuthResult { Success = true, Message = "Email confirmed successfully" };
         }
 
         public async Task<ServiceResult<object>> LoginAsync(LoginDTO dto)
@@ -99,112 +79,14 @@ namespace Medication_Reminder_API.Application.Services
             if (!isPasswordValid)
                 return new ServiceResult<object> { Success = false, Message = "Invalid email or password" };
 
-            // توليد Refresh Token
-            var refreshToken = Guid.NewGuid().ToString();
-            user.RefreshToken = refreshToken;
-            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
-            await _userManager.UpdateAsync(user);
-
-            // Claims بدون tokenVersion
-            var claims = new List<Claim>
-            {
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(ClaimTypes.NameIdentifier, user.Id),
-                new Claim(ClaimTypes.Name, user.UserName)
-            };
-
-            var roles = await _userManager.GetRolesAsync(user);
-            foreach (var role in roles)
-                claims.Add(new Claim(ClaimTypes.Role, role));
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
-                claims: claims,
-                expires: DateTime.Now.AddHours(1),
-                signingCredentials: creds
-            );
+            var tokenResult = await _tokenService.GenerateTokenAsync(user);
 
             return new ServiceResult<object>
             {
                 Success = true,
                 Message = "Login successful",
-                Data = new
-                {
-                    token = new JwtSecurityTokenHandler().WriteToken(token),
-                    expiration = token.ValidTo,
-                    RefreshToken = refreshToken
-                }
+                Data = tokenResult
             };
-        }
-
-        public async Task<ServiceResult<object>> RefreshTokenAsync(string refreshToken)
-        {
-            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
-
-            if (user == null || user.RefreshTokenExpiryTime < DateTime.UtcNow)
-                return new ServiceResult<object> { Success = false, Message = "Invalid or expired refresh token" };
-
-            // Claims بدون tokenVersion
-            var claims = new List<Claim>
-            {
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(ClaimTypes.NameIdentifier, user.Id),
-                new Claim(ClaimTypes.Name, user.UserName)
-            };
-
-            var roles = await _userManager.GetRolesAsync(user);
-            foreach (var role in roles)
-                claims.Add(new Claim(ClaimTypes.Role, role));
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
-                claims: claims,
-                expires: DateTime.Now.AddHours(1),
-                signingCredentials: creds
-            );
-
-            return new ServiceResult<object>
-            {
-                Success = true,
-                Message = "Token refreshed successfully",
-                Data = new
-                {
-                    token = new JwtSecurityTokenHandler().WriteToken(token),
-                    expiration = token.ValidTo
-                }
-            };
-        }
-
-        public async Task<ServiceResult> ChangePasswordAsync(string userId, ChangePasswordDto dto)
-        {
-            if (userId == null)
-                return new ServiceResult { Success = false, Message = "Unauthorized request" };
-
-            var user = await _userManager.FindByIdAsync(userId);
-            if (user == null)
-                return new ServiceResult { Success = false, Message = "User not found" };
-
-            if (dto.NewPassword != dto.ConfirmNewPassword)
-                return new ServiceResult { Success = false, Message = "New password and confirmation do not match" };
-
-            var result = await _userManager.ChangePasswordAsync(user, dto.OldPassword, dto.NewPassword);
-            if (!result.Succeeded)
-                return new ServiceResult { Success = false, Message = string.Join(", ", result.Errors.Select(e => e.Description)) };
-
-            // هنا بدل tokenVersion امسحي refresh token
-            user.RefreshToken = null;
-            await _userManager.UpdateAsync(user);
-
-            return new ServiceResult { Success = true, Message = "Password changed successfully" };
         }
     }
-
 }
